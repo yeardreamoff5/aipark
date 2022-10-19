@@ -1,12 +1,8 @@
 import cv2
 import math
 import numpy as np
-import glob
-import pickle
-import pandas as pd
 
-
-def face_orientation(frame, landmarks):
+def calculate_degree(frame, landmarks):
     size = frame.shape  # (height, width, color_channel)
 
     image_points = np.array([
@@ -79,4 +75,4 @@ def face_orientation(frame, landmarks):
     roll = -math.degrees(math.asin(math.sin(roll)))
     yaw = math.degrees(math.asin(math.sin(yaw)))
 
-    return imgpts, modelpts, (str(int(roll)), str(int(pitch)), str(int(yaw))), (landmarks[4], landmarks[5])
+    return imgpts, modelpts, (str(int(roll)), str(int(pitch)), str(int(yaw)))
