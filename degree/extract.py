@@ -7,6 +7,7 @@ import glob
 import pickle
 import pandas as pd
 from extract_degree import calculate_degree
+import os
 
 img_folder = ["1_QCIF","2_240p","3_360p","4_480p","5_720p","6_1080p","7_2K","8_4K"]
 
@@ -28,6 +29,8 @@ class Extract:
         print(file)
         image = cv2.imread(file)
         img = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        out_face = np.zeros_like(image)
+
         result = detector(img, 1)
         for i, rect in enumerate(result):
           l = rect.left()
@@ -35,7 +38,18 @@ class Extract:
           b = rect.bottom()
           r = rect.right()
           shape = predictor(img, rect)
-          shape_np = face_utils.shape_to_np(shape).tolist()
+          shape_mask = face_utils.shape_to_np(shape)
+          shape_np = shape_mask.tolist()
+          #initialize mask array
+          remapped_shape = np.zeros_like(shape_mask) 
+          feature_mask = np.zeros((image.shape[0], image.shape[1]))   
+          # extract the face
+          remapped_shape = cv2.convexHull(shape_mask)
+          cv2.fillConvexPoly(feature_mask, remapped_shape[0:27], 1)
+          feature_mask = feature_mask.astype(np.bool)
+          out_face[feature_mask] = image[feature_mask]
+          
+          
         try:
           landmarks = [shape_np[33],
                        shape_np[8],
@@ -53,6 +67,18 @@ class Extract:
         file_name = file.replace(self.img_parent_path, "").replace(
           ".jpg", "")
         pickle_path = self.img_parent_path + file_name + ".txt"
+        mask_folder = self.img_parent_path + folder_name + "/result"
+        try:
+            if not os.path.exists(mask_folder):
+                os.makedirs(mask_folder)
+        except OSError:
+            print("Error: Failed to create the directory.")
+
+        file_name_1 = file.replace(self.img_parent_path, "").replace(folder_name,"")
+        mask_path = mask_folder + file_name_1
+        
+        cv2.imwrite(mask_path, out_face)
+        print(mask_path)
         print(pickle_path)
         with open(pickle_path, "wb") as lf:
           pickle.dump(landmarks, lf)
