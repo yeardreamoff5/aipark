@@ -7,6 +7,7 @@ import glob
 import pickle
 import pandas as pd
 import argparse
+from IQA.iqa import iqa_inference
 
 def extract(args):
     # img_folder = ["2_240p","3_360p"]
@@ -25,7 +26,7 @@ def parse_arg():
 
 def main(argv):
     extract(argv)
-
+    iqa_inference() # IQA infernece , 결과 csv는 score 폴더에 저장됨
 if __name__ == "__main__":
     args = parse_arg()
     main(args)
