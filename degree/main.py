@@ -7,26 +7,26 @@ import glob
 import pickle
 import pandas as pd
 import argparse
-from IQA.iqa import iqa_inference
+# from IQA.iqa import iqa_inference
 
 def extract(args):
     # img_folder = ["2_240p","3_360p"]
     # img_parent_path = "data/"
-    test = Extract(args.img_folder, args.img_parent_path)
+    test = Extract(args.img_folder_path)
     test.landmarks()
     test.degree()
 def parse_arg():
     parser = argparse.ArgumentParser(prog='extract degree from face landmarks')
 
-    parser.add_argument("--run_folder_list", nargs="+", metavar="img_folder", dest="img_folder", help="want to list")
-    parser.add_argument("--img_parent_path", type=str, metavar="img_parent_path", dest="img_parent_path", help="file path")
+    # parser.add_argument("--run_folder_list", nargs="+", metavar="img_folder", dest="img_folder", help="want to list")
+    parser.add_argument("--img_folder_path", type=str, metavar="img_folder_path", dest="img_folder_path", help="input image folder path: /Users/krc")
 
     return parser.parse_args()
 
 
 def main(argv):
     extract(argv)
-    iqa_inference() # IQA infernece , 결과 csv는 score 폴더에 저장됨
+    # iqa_inference() # IQA infernece , 결과 csv는 score 폴더에 저장됨
 if __name__ == "__main__":
     args = parse_arg()
     main(args)

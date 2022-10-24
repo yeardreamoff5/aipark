@@ -23,31 +23,31 @@ def calculate_degree(frame, landmarks):
     #                         shape_np[54]
     #                     ], dtype="double")
 
-    # # default model_points
-    # model_points = np.array([
-    #     (0.0, 0.0, 0.0),  # Nose tip
-    #     (0.0, -330.0, -65.0),  # Chin
-    #     (-225.0, 170.0, -135.0),  # Left eye left corner
-    #     (225.0, 170.0, -135.0),  # Right eye right corne
-    #     (-150.0, -150.0, -125.0),  # Left Mouth corner
-    #     (150.0, -150.0, -125.0)  # Right mouth corner
-    # ])
-
-    #edit model_points - https://github.com/jerryhouuu/Face-Yaw-Roll-Pitch-from-Pose-Estimation-using-OpenCV
+    # default model_points
     model_points = np.array([
-                            (0.0, 0.0, 0.0),             # Nose tip
-                            (0.0, -330.0, -65.0),        # Chin
-                            (-165.0, 170.0, -135.0),     # Left eye left corner
-                            (165.0, 170.0, -135.0),      # Right eye right corne
-                            (-150.0, -150.0, -125.0),    # Left Mouth corner
-                            (150.0, -150.0, -125.0)      # Right mouth corner
-                        ])
+        (0.0, 0.0, 0.0),  # Nose tip
+        (0.0, -330.0, -65.0),  # Chin
+        (-225.0, 170.0, -135.0),  # Left eye left corner
+        (225.0, 170.0, -135.0),  # Right eye right corne
+        (-150.0, -150.0, -125.0),  # Left Mouth corner
+        (150.0, -150.0, -125.0)  # Right mouth corner
+    ])
+
+    # #edit model_points - https://github.com/jerryhouuu/Face-Yaw-Roll-Pitch-from-Pose-Estimation-using-OpenCV
+    # model_points = np.array([
+    #                         (0.0, 0.0, 0.0),             # Nose tip
+    #                         (0.0, -330.0, -65.0),        # Chin
+    #                         (-165.0, 170.0, -135.0),     # Left eye left corner
+    #                         (165.0, 170.0, -135.0),      # Right eye right corne
+    #                         (-150.0, -150.0, -125.0),    # Left Mouth corner
+    #                         (150.0, -150.0, -125.0)      # Right mouth corner
+    #                     ])
 
     # Camera internals
 
     center = (size[1] / 2, size[0] / 2)
-    # focal_length = size[1]
-    focal_length = center[0] / np.tan(60/2 * np.pi / 180) #default: focal_length=size[1]
+    focal_length = size[1]
+    # focal_length = center[0] / np.tan(60/2 * np.pi / 180) #default: focal_length=size[1]
     camera_matrix = np.array(
         [[focal_length, 0, center[0]],
          [0, focal_length, center[1]],
