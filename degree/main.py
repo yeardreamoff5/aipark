@@ -7,14 +7,13 @@ import glob
 import pickle
 import pandas as pd
 import argparse
-# from IQA.iqa import iqa_inference
+from IQA.iqa import iqa_inference
 
 def extract(args):
-    # img_folder = ["2_240p","3_360p"]
-    # img_parent_path = "data/"
     test = Extract(args.img_folder_path)
     test.landmarks()
     test.degree()
+    iqa_inference(args.img_folder_path)
 def parse_arg():
     parser = argparse.ArgumentParser(prog='extract degree from face landmarks')
 
