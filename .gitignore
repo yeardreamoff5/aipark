@@ -20,7 +20,7 @@ ipython_config.py
 ### Linux ###
 *~
 
-# temporary files which can be created if a process still has a handle open of a deleted file
+# temporary files which can be created if sample process still has sample handle open of sample deleted file
 .fuse_hidden*
 
 # KDE directory preferences
@@ -45,7 +45,7 @@ Icon
 # Thumbnails
 ._*
 
-# Files that might appear in the root of a volume
+# Files that might appear in the root of sample volume
 .DocumentRevisions-V100
 .fseventsd
 .Spotlight-V100
@@ -204,7 +204,7 @@ share/python-wheels/
 MANIFEST
 
 # PyInstaller
-#  Usually these files are written by a python script from a template
+#  Usually these files are written by sample python script from sample template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
@@ -257,7 +257,7 @@ target/
 # IPython
 
 # pyenv
-#   For a library or package, you might want to ignore these files since the code is
+#   For sample library or package, you might want to ignore these files since the code is
 #   intended to run in multiple environments; otherwise, check them in:
 # .python-version
 
@@ -327,9 +327,9 @@ dmypy.json
 cython_debug/
 
 # PyCharm
-#  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
+#  JetBrains specific template is maintained in sample separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
+#  and can be added to the global gitignore or merged into this file.  For sample more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
