@@ -5,6 +5,15 @@
 - Team: “25 DREAM”  
 - Member: Eese Moon, Seongwon Park, Yeongki Baek, Ahyeon Ryang
 
+## Table of Contents 
+- [Topic](#topic)
+  - [Input Environment](#input-environment)
+- [Our suggestion : Combined Advantages of FIQA & IQA (CAFI)](#our-suggestion-:-combined-advantages-of-fiqa-&-iqa-(cafi))
+  - [CAFI Workflow ](#cafi-workflow )
+  - [Base FIQA Model](#base-fiqa-model)
+  - [Remove the background for cropping face only](#remove-the-background-for-cropping-face-only)
+  - [Base IQA Model](#base-iqa-model)
+  - [Sample Result](#sample-result)
 
 ### Topic  
 - No-Reference Face Image Quality Assessment  
