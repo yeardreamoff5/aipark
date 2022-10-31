@@ -1,6 +1,7 @@
 ## Start-Up linked Project
 ### AIPARK - No-Reference Face Image Quality Assessment
 
+- Project Period: Sep. 23 ~ Oct. 25, 2022
 - Team: “25 DREAM”  
 - Member: Eese Moon, Seongwon Park, Yeongki Baek, Ahyeon Ryang
 
@@ -22,7 +23,7 @@
 
 
 ### Base FIQA Model  
-**SER-FIQ** : Unsupervised estimation of face image quality  
+- **SER-FIQ** : Unsupervised estimation of face image quality  
   - Score impact depending on face detection  
   - Simple image quality differences in the same image appear to be indistinguishable  
 
@@ -33,11 +34,11 @@
 > *Referece repository: https://github.com/pterhoer/FaceImageQuality*
 
 ### Remove the background for cropping face only
-> *Referece site: https://learnopencv.com/head-pose-estimation-using-opencv-and-dlib/*
+> *Referece site: https://learnopencv.com/head-pose-estimation-using-opencv-and-dlib*
 
 
 ### Base IQA Model
-**DBCNN** : Additionally used to evaluate the quality of masked face images addition  
+- **DBCNN** : Additionally used to evaluate the quality of masked face images addition  
 > It can be changed according to your preference  
 > *Referece repository: https://github.com/chaofengc/IQA-PyTorch*
 
