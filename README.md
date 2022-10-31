@@ -8,7 +8,7 @@
 ## Table of Contents 
 - [Topic](#topic)
   - [Input Environment](#input-environment)
-- [Our suggestion : Combined Advantages of FIQA & IQA (CAFI)](#our-suggestion--combined-advantages-of-fiqa--iqa-(cafi))
+- [Our suggestion : Combined Advantages of FIQA & IQA (CAFI)](#our-suggestion--combined-advantages-of-fiqa--iqa-cafi)
   - [CAFI Workflow ](#cafi-workflow )
   - [Base FIQA Model](#base-fiqa-model)
   - [Remove the background for cropping face only](#remove-the-background-for-cropping-face-only)
