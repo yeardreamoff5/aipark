@@ -43,16 +43,16 @@
 > Role on CAFI:  
   Used as a filter for recognizable level face images
 
-> *Referece repository: https://github.com/pterhoer/FaceImageQuality*
+> *Reference repository: https://github.com/pterhoer/FaceImageQuality*
 
 ### Remove the background for cropping face only
-> *Referece site: https://learnopencv.com/head-pose-estimation-using-opencv-and-dlib*
+> *Reference site: https://learnopencv.com/head-pose-estimation-using-opencv-and-dlib*
 
 
 ### Base IQA Model
 - **DBCNN** : Additionally used to evaluate the quality of masked face images addition  
 > It can be changed according to your preference  
-> *Referece repository: https://github.com/chaofengc/IQA-PyTorch*
+> *Reference repository: https://github.com/chaofengc/IQA-PyTorch*****
 
 
 ### Sample Result
