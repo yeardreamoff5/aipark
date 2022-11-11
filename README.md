@@ -52,7 +52,7 @@
 ### Base IQA Model
 - **DBCNN** : Additionally used to evaluate the quality of masked face images addition  
 > It can be changed according to your preference  
-> *Reference repository: https://github.com/chaofengc/IQA-PyTorch*****
+> *Reference repository: https://github.com/chaofengc/IQA-PyTorch*
 
 
 ### Sample Result
